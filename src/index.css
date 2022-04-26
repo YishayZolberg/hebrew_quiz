@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f4f8;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.input,
+.passwordInput,
+.emailInput,
+.nameInput,
+.textarea {
+  box-shadow: rgba(0, 0, 0, 0.11);
+  border: none;
+  background: #ffffff;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 100%;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 3rem;
+  font-size: 1rem;
+}
+@media (min-width: 1100px) {
+  .input,
+  .passwordInput,
+  .emailInput,
+  .nameInput,
+  .textarea {
+    padding: 0 5rem;
+  }
+}
+
+.textarea {
+  padding: 1rem 1.5rem;
+  height: 300px;
+  border-radius: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: 'Verdana', cursive, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #7cc6fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #252d4a;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 85px;
+  background-color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarNav {
+  width: 100%;
+  margin-top: 0.75rem;
+  overflow-y: hidden;
+}
+
+.navbarListItems {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbarListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarListItemName,
+.navbarListItemNameActive {
+  margin-top: 0.25rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8f8f8f;
+}
+.navbarListItemNameActive {
+  color: #2c2c2c;
+}
+.pageContainer,
+.offers,
+.profile,
+.listingDetails,
+.category,
+.explore {
+  margin: 1rem;
+}
+@media (min-width: 1024px) {
+  .pageContainer,
+  .offers,
+  .profile,
+  .listingDetails,
+  .category,
+  .explore {
+    margin: 3rem;
+  }
+}
+.pageHeader {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #00cc66 transparent #00cc66 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile {
+  margin-bottom: 10rem;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logOut {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #00cc66;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.profileDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.personalDetailsText {
+  font-weight: 600;
+}
+
+.changePersonalDetails {
+  cursor: pointer;
+  font-weight: 600;
+  color: #00cc66;
+}
+
+.profileCard {
+  background-color: #3e4664;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName,
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive,
+.profileNameActive {
+  all: unset;
+  margin: 0.3rem 0;
+  font-weight: 600;
+  width: 100%;
+}
+.profileNameActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive {
+  font-weight: 500;
+}
+.profileEmailActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+.profileAddressActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+.signInBar,
+.signUpBar {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: inherit;
+}
+
+.signInButton,
+.signUpButton,
+.signInText,
+.signUpText {
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .signInBar,
+  .signUpBar {
+    justify-content: start;
+  }
+}
+
+.signInText,
+.signUpText {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.signInButton,
+.signUpButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #00cc66;
+  border-radius: 50%;
+}
+@media (min-width: 1024px) {
+  .signInButton,
+  .signUpButton {
+    margin-left: 3rem;
+  }
+}
+
+.socialLogin {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialIconDiv {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.socialIconImg {
+  width: 100%;
+}
+
+.registerLink {
+  margin-top: 4rem;
+  color: #00cc66;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1217px) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+}
+@media (max-height: 536) {
+  .explore {
+    margin-bottom: 10rem;
+  }
+}
+.nameInput {
+  margin-bottom: 2rem;
+  background: url('./assets/svg/badgeIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.emailInput {
+  margin-bottom: 2rem;
+  background: url('./assets/svg/personIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.passwordInputDiv {
+  position: relative;
+}
+
+.passwordInput {
+  margin-bottom: 2rem;
+  background: url('./assets/svg/lockIcon.svg') #ffffff 2.5% center no-repeat;
+}
+
+.showPassword {
+  cursor: pointer;
+  position: absolute;
+  top: -4%;
+  right: 1%;
+  padding: 1rem;
+}
+
+.forgotPasswordLink {
+  cursor: pointer;
+  color: #00cc66;
+  font-weight: 600;
+  text-align: right;
+}
+
+.signInBar,
+.signUpBar {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: inherit;
+}
+
+.signInButton,
+.signUpButton,
+.signInText,
+.signUpText {
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .signInBar,
+  .signUpBar {
+    justify-content: start;
+  }
+}
+
+.signInText,
+.signUpText {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.signInButton,
+.signUpButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #00cc66;
+  border-radius: 50%;
+}
+@media (min-width: 1024px) {
+  .signInButton,
+  .signUpButton {
+    margin-left: 3rem;
+  }
+}
